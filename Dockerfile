@@ -10,7 +10,7 @@ FROM dockerfile/nodejs
 # Install Ghost
 RUN \
   cd /tmp && \
-  wget https://ghost.org/zip/ghost-0.6.1.zip && \
+  wget https://ghost.org/zip/ghost-0.6.2.zip && \
   unzip ghost-0.6.2.zip -d /ghost && \
   rm -f ghost-0.6.2.zip && \
   cd /ghost && \
