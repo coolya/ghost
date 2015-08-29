@@ -10,9 +10,9 @@ FROM dockerfile/nodejs
 # Install Ghost
 RUN \
   cd /tmp && \
-  wget https://ghost.org/zip/ghost-0.6.3.zip && \
-  unzip ghost-0.6.3.zip -d /ghost && \
-  rm -f ghost-0.6.3.zip && \
+  wget https://ghost.org/zip/ghost-0.6.4.zip && \
+  unzip ghost-0.6.4.zip -d /ghost && \
+  rm -f ghost-0.6.4.zip && \
   cd /ghost && \
   npm install --production && \
   sed 's/127.0.0.1/0.0.0.0/' /ghost/config.example.js > /ghost/config.js && \
