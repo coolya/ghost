@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM node:latest
+FROM node:0.10.40
 RUN apt-get update 
 RUN apt-get install -y zip unzip
 # Install Ghost
