@@ -6,7 +6,8 @@
 
 # Pull base image.
 FROM node:latest
-RUN apt-get install -y unzip
+RUN apt-get update 
+RUN apt-get install -y zip
 # Install Ghost
 RUN \
   cd /tmp && \
