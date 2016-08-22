@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM node:0.10
+FROM node:argon
 RUN apt-get update 
 RUN apt-get install -y zip unzip
 # Install Ghost
