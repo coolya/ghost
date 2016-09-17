@@ -17,7 +17,10 @@ RUN \
   cd /ghost && \
   npm install --production && \
   sed 's/127.0.0.1/0.0.0.0/' /ghost/config.example.js > /ghost/config.js && \
-  useradd ghost --home /ghost
+  useradd ghost --home /ghost && \
+  apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false zip unzip && \
+  npm cache clean && \
+  rm -rf /tmp/npm*
 
 # Add files.
 ADD start.bash /ghost-start
