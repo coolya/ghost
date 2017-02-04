@@ -11,9 +11,9 @@ RUN apt-get install -y zip unzip
 # Install Ghost
 RUN \
   cd /tmp && \
-  wget https://ghost.org/zip/ghost-0.11.4.zip && \
-  unzip ghost-0.11.4.zip -d /ghost && \
-  rm -f ghost-0.11.4.zip && \
+  wget https://github.com/TryGhost/Ghost/releases/download/0.11.4/Ghost-0.11.4.zip && \
+  unzip Ghost-0.11.4.zip -d /ghost && \
+  rm -f Ghost-0.11.4.zip && \
   cd /ghost && \
   npm install --production && \
   sed 's/127.0.0.1/0.0.0.0/' /ghost/config.example.js > /ghost/config.js && \
