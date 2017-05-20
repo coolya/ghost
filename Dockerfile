@@ -11,7 +11,7 @@ RUN apt-get install -y zip unzip
 # Install Ghost
 RUN \
   cd /tmp && \
-  wget https://github.com/TryGhost/Ghost/releases/download/0.11.7/Ghost-0.11.9.zip && \
+  wget https://github.com/TryGhost/Ghost/releases/download/0.11.9/Ghost-0.11.9.zip && \
   unzip Ghost-0.11.9.zip -d /ghost && \
   rm -f Ghost-0.11.9.zip && \
   cd /ghost && \
